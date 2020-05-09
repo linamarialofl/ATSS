@@ -1,0 +1,308 @@
+
+<script src="./Vehiculo.js"></script>
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+
+h1{
+    font-size: 30px;
+    color: rgba(63, 58, 58, 0.856);
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  table{
+    width:100%;
+    table-layout: fixed;
+  }
+  .tbl-header{
+    background-color: rgba(120, 185, 247, 0.589);
+   }
+  .tbl-content{
+    height: 300px;
+    overflow-x: auto;
+    margin-top: 10px;
+    border: 1px solid rgba(27, 26, 26, 0.842);
+    background-color: rgba(252, 252, 252, 0.521);
+   
+}
+  }
+  th{
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    color: bl;
+    text-transform: uppercase;
+  }
+  td{
+    padding: 15px;
+    text-align: center;
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: rgba(10, 10, 10, 0.952);
+    border-bottom: solid 1px rgba(119, 118, 118, 0.178);
+  
+}
+.Estado{
+      background-color: white;
+      }
+      .Bueno{
+          background-color: rgba(163, 231, 163, 0.384);
+      }
+      .Malo{
+          background-color: rgba(243, 117, 67, 0.466);
+      }
+      .ManC{
+          background-color: rgba(241, 206, 129, 0.644);
+      }
+      .MantenimientoPreventivo{
+          background-color: rgba(233, 235, 104, 0.377);
+      }
+  
+
+  /* demo styles */
+  
+  
+  body{
+    height: 100%;
+    background-image:  url("./IMAGES/fondo5.png");
+                  
+  background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 240px;
+  }
+  
+  section{
+    margin: 50px;
+  }
+
+ 
+
+  /* follow me template */
+  .made-Aw {
+    margin-top: 40px;
+    padding: 10px;
+    clear: left;
+    text-align: center;
+    font-size: 10px;
+    font-family: arial;
+    color: rgba(109, 106, 106, 0.925);
+  }
+  
+  .made-with-love a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .made-with-love a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* for custom scrollbar for webkit browser*/
+  
+  ::-webkit-scrollbar {
+      width: 6px;
+  } 
+  ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  } 
+  ::-webkit-scrollbar-thumb {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  }
+  </style>
+  
+  <script>
+    function colores(){
+        var color = document.getElementById("estado");
+        var estado = document.getElementById("estado").value;
+        if (estado=="Estado"){
+          color.className="Estado";
+        }
+        if(estado=="Bueno"){
+            color.className = "Bueno";
+        }
+        if(estado=="Malo"){
+            color.className = "Malo";
+        }
+        if(estado=="ManC"){
+            color.className = "ManC";
+        }
+        if(estado=="MantenimientoPreventivo"){
+          color.className = "MantenimientoPreventivo";
+      }
+    }
+</script>
+
+<section>
+
+  <!--for demo wrap-->
+  <h1>Seguimiento de vehiculos</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>ITEM</th>
+          <th>Validacion</th>
+          <th>Parametro a revisar</th>
+          <th>Estado</th>
+          <th>Evidencia fotografica</th>
+          <th>Observaciones</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>ESTADO DE CABINA Y CONTROLES</td>
+          <td>ESPEJO RETROVISOR/LATERAL</td>
+          <td>
+            <select name="estado" id="estado" onChange="colores();" class="defecto">
+                <option value="Estado">Estado</option>
+            <option value="Bueno">Bueno</option>
+                <option value="Malo"> Malo</option >
+                <option value="ManC">Mantenimiento Correctivo </option>
+                <option value="MantenimientoPreventivo">Mantenimiento Preventivo</option>
+              </select></td>
+          <td>-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fa fa-cloud-upload"></i> Subir foto/video
+            </label>
+            <input id="file-upload" type="file"/></td>
+          <td><textarea class="observacion" rows="3"></textarea></td>
+        </tr>
+
+
+
+        <tr>
+          <td>2</td>
+          <td>ESTADO DE CABINA Y CONTROLES</td>
+          <td>PITO-ALARMA DE RESERVA</td>
+          <td>
+            <select name="estado" id="estado" onChange="colores();" class="defecto">
+              <option value="Estado">Estado</option>
+          <option value="Bueno">Bueno</option>
+              <option value="Malo"> Malo</option >
+              <option value="ManC">Mantenimiento Correctivo </option>
+              <option value="MantenimientoPreventivo">Mantenimiento Preventivo</option>
+            </select></td>
+          <td>-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fa fa-cloud-upload"></i> Subir foto/video
+            </label>
+            <input id="file-upload" type="file"/></td>
+          <td><textarea class="observacion" rows="3"></textarea></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ESTADO DE CABINA Y CONTROLES</td>
+          <td>FRENOS</td>
+          <td>
+            <select name="estado" id="estado" onChange="colores();" class="defecto">
+              <option value="Estado">Estado</option>
+          <option value="Bueno">Bueno</option>
+              <option value="Malo"> Malo</option >
+              <option value="ManC">Mantenimiento Correctivo </option>
+              <option value="MantenimientoPreventivo">Mantenimiento Preventivo</option>
+            </select></td>
+          <td>-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fa fa-cloud-upload"></i> Subir foto/video
+            </label>
+            <input id="file-upload" type="file"/></td>
+          <td><textarea class="observacion" rows="3"></textarea></td>
+        <tr>
+          <td>4</td>
+          <td>ESTADO DE CABINA Y CONTROLES</td>
+          <td>LIMPIA BRISAS</td>
+          <td>
+            <select name="estado" id="estado" onChange="colores();" class="defecto">
+              <option value="Estado">Estado</option>
+          <option value="Bueno">Bueno</option>
+              <option value="Malo"> Malo</option >
+              <option value="ManC">Mantenimiento Correctivo </option>
+              <option value="MantenimientoPreventivo">Mantenimiento Preventivo</option>
+            </select></td>
+          <td>-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fa fa-cloud-upload"></i> Subir foto/video
+            </label>
+            <input id="file-upload" type="file"/></td>
+          <td><textarea class="observacion" rows="3"></textarea></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>ESTADO DE CABINA Y CONTROLES</td>
+          <td>CINTURONES DE SEGURIDAD</td>
+          <td>
+            <select name="estado" id="estado" onChange="colores();" class="defecto">
+              <option value="Estado">Estado</option>
+          <option value="Bueno">Bueno</option>
+              <option value="Malo"> Malo</option >
+              <option value="ManC">Mantenimiento Correctivo </option>
+              <option value="MantenimientoPreventivo">Mantenimiento Preventivo</option>
+            </select></td>
+          <td>-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fa fa-cloud-upload"></i> Subir foto/video
+            </label>
+            <input id="file-upload" type="file"/></td>
+          <td><textarea class="observacion" rows="3"></textarea></td>
+        </tr>
+       
+        <tr>
+          <td>6</td>
+          <td>ESTADO DE CABINA Y CONTROLES</td>
+          <td>PUERTAS</td>
+          <td>
+            <select name="estado" id="estado" onChange="colores();" class="defecto">
+              <option value="Estado">Estado</option>
+          <option value="Bueno">Bueno</option>
+              <option value="Malo"> Malo</option >
+              <option value="ManC">Mantenimiento Correctivo </option>
+              <option value="MantenimientoPreventivo">Mantenimiento Preventivo</option>
+            </select></td>
+          <td>-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fa fa-cloud-upload"></i> Subir foto/video
+            </label>
+            <input id="file-upload" type="file"/></td>
+          <td><textarea class="observacion" rows="3"></textarea></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>ESTADO DE CABINA Y CONTROLES</td>
+          <td>VIDRIOS</td>
+          <td>
+            <select name="estado" id="estado" onChange="colores();" class="defecto">
+              <option value="Estado">Estado</option>
+          <option value="Bueno">Bueno</option>
+              <option value="Malo"> Malo</option >
+              <option value="ManC">Mantenimiento Correctivo </option>
+              <option value="MantenimientoPreventivo">Mantenimiento Preventivo</option>
+            </select></td>
+          <td>-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fa fa-cloud-upload"></i> Subir foto/video
+            </label>
+            <input id="file-upload" type="file"/></td>
+          <td><textarea class="observacion" rows="3"></textarea></td>
+       
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<div class="made-Aw">
+  AW Company
+ 
+</div>
+
+</html>
